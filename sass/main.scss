@@ -1,0 +1,23 @@
+@import './utils/placehokders';
+@import './utils/variables';
+@import './base/reset';
+@import './base/commons';
+
+@import './components/container';
+@import './components/sections';
+
+@import './utils/hiddens';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/description';
+@import './layouts/direction';
+@import './layouts/team';
+@import './layouts/customers';
+@import './layouts/footer-logo';
+@import './layouts/footer-container';
+@import './layouts/footer-address';
+@import './layouts/footer-invitation';
+@import './layouts/footer-singUp';
+@import './layouts/portfolio';
+@import './layouts/modal';

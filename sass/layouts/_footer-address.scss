@@ -1,0 +1,29 @@
+.address-item:nth-child(2) {
+  margin: 9px 0;
+}
+
+.item-address {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+
+  text-decoration: none;
+  color: var(--a-color-white);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-item .effect:hover,
+.address-item .effect:focus {
+  color: var(--accent-color);
+}
+
+.item-mail,
+.item-phone {
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.71;
+
+  text-decoration: none;
+  color: var(--footer-color-contact);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

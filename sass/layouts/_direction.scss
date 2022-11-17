@@ -1,0 +1,39 @@
+.direction {
+  @include section-padding;
+}
+
+.direction-list {
+  display: flex;
+  gap: 30px;
+}
+
+.direction-item,
+.portfolio-item {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.direction-title {
+  @include section-title
+}
+
+.direction-text-wrap {
+  position: relative;
+  /* overflow: hidden; */
+}
+
+.direction-text-item {
+  position: absolute;
+  bottom: 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+  height: 70px;
+  width: 100%;
+}
