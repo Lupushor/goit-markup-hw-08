@@ -16,6 +16,25 @@
   --customers-color: #afb1b8;
   --invitation-bg-color: rgba(255, 255, 255, 0.1);
   --invitation-icon-color: #ffffff;
+  --bg-gradient: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  );
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 p,
@@ -87,20 +106,6 @@ body {
 
 .section-width {
   min-width: 1200px;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 .main-nav {
@@ -215,7 +220,7 @@ body {
   margin: 0 auto;
   padding-top: 118px;
   padding-bottom: 118px;
-  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img1_480.jpg");
+  background-image: var(--bg-gradient), url("../images/hero-bg/hero-bg-480px.jpg");
   max-width: 480px;
   background-position: center;
   background-repeat: no-repeat;
@@ -223,12 +228,22 @@ body {
   background-color: var(--hero-bg-color);
   text-align: center;
 }
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--bg-gradient), url("../images/hero-bg/hero-bg-480px-2x.jpg");
+  }
+}
 @media screen and (min-width: 768px) {
   .hero {
     padding-top: 118px;
     padding-bottom: 118px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/img1_768.jpg");
+    background-image: var(--bg-gradient), url("../images/hero-bg/hero-bg-768px.jpg");
     max-width: 768px;
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--bg-gradient), url("../images/hero-bg/hero-bg-768px-2x.jpg");
   }
 }
 @media screen and (min-width: 1230px) {
@@ -236,7 +251,12 @@ body {
     padding-top: 200px;
     padding-bottom: 200px;
     max-width: 1600px;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/Img1.jpg");
+    background-image: var(--bg-gradient), url("../images/hero-bg/hero-bg-1200px.jpg");
+  }
+}
+@media screen and (min-width: 1230px) and (min-device-pixel-ratio: 2), screen and (min-width: 1230px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1230px) and (min-resolution: 192dpi), screen and (min-width: 1230px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: var(--bg-gradient), url("../images/hero-bg/hero-bg-1200px-2x.jpg");
   }
 }
 
@@ -306,9 +326,9 @@ body {
 }
 
 .description-list {
-  gap: 30px;
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .description-item {
@@ -425,9 +445,8 @@ body {
   gap: 30px;
 }
 
-.direction-item,
-.portfolio-item {
-  flex-basis: calc((100% - 60px) / 3);
+.direction-item {
+  width: calc((100% - 60px) / 3);
 }
 
 .direction-title {
@@ -482,13 +501,25 @@ body {
 
 .team-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .team-item {
+  width: 100%;
   background: var(--a-color-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (min-width: 768px) {
+  .team-item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1230px) {
+  .team-item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 
 .team-description {
@@ -564,12 +595,23 @@ body {
 
 .customers-list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .customers-item {
-  width: calc((100% - 170px) / 6);
   height: 92px;
+  width: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .customers-item {
+    width: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers-item {
+    width: calc((100% - 150px) / 6);
+  }
 }
 
 .customers-icon {
@@ -803,6 +845,10 @@ body {
   gap: 30px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.portfolio-item {
+  width: calc((100% - 60px) / 3);
 }
 
 .portfolio-link {

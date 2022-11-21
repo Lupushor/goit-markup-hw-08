@@ -1,12 +1,14 @@
+@import './utils/mixins.scss';
 @import './utils/placehokders';
 @import './utils/variables';
+@import './utils/hiddens';
 @import './base/reset';
 @import './base/commons';
 
 @import './components/container';
 @import './components/sections';
 
-@import './utils/hiddens';
+
 
 @import './layouts/header';
 @import './layouts/hero';

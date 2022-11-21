@@ -2,18 +2,25 @@
   @include section-padding;
 }
 
-.customers-title  {
-  @include section-title
+.customers-title {
+  @include section-title;
 }
 
 .customers-list {
-  display: flex;
-  gap: 30px;
+  @include lists-value;
 }
 
 .customers-item {
-  width: calc((100% - 170px) / 6);
   height: 92px;
+  @include calc-width(2, 30px);
+
+  @media screen and (min-width: 768px) {
+    @include calc-width(3, 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include calc-width(6, 30px);
+  }
 }
 
 .customers-icon {

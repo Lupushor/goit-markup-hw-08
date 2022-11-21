@@ -54,6 +54,11 @@
   flex-wrap: wrap;
 }
 
+.portfolio-item {
+  @include calc-fb (3, 30px)
+  // flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
 .portfolio-link {
   text-decoration: none;
   display: block;

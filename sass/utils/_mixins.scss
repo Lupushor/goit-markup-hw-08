@@ -1,0 +1,21 @@
+@mixin retina {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin calc-width($count, $gap) {
+  width: calc((100% - $gap * ($count - 1)) / $count);
+}
+
+@mixin calc-fb($count, $gap) {
+  width: calc((100% - $gap * ($count - 1)) / $count);
+}
+
+@mixin lists-value {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}

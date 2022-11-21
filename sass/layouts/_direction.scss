@@ -7,9 +7,8 @@
   gap: 30px;
 }
 
-.direction-item,
-.portfolio-item {
-  flex-basis: calc((100% - 2 * 30px) / 3);
+.direction-item {
+  @include calc-fb (3, 30px);
 }
 
 .direction-title {
