@@ -11,8 +11,15 @@
 .logo-header {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  
+  font-size: 24px;
+  line-height: 1.16;
+  
+  @media screen and (min-width: 480px) {
+    font-size: 26px;
   line-height: 1.19;
+  }
+  
 
   text-decoration: none;
   color: var(--a-color-black);
@@ -24,8 +31,12 @@
 
 .nav-list {
   position: relative;
-  display: flex;
+  display: none;
   margin-left: 93px;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+  }
 }
 
 .nav-list .nav-item + .nav-item {
@@ -58,8 +69,18 @@
 }
 
 .contact-nav {
-  display: flex;
+  display: none;
   margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .contact-nav .con-nav-item + .con-nav-item {
@@ -75,9 +96,10 @@
 
 .contact-link {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -86,6 +108,11 @@
   text-decoration: none;
   color: inherit;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 32px;
+  padding-bottom: 32px;
+  }
 }
 
 .contact-icon-mail,
