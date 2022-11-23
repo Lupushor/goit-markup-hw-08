@@ -68,6 +68,10 @@ img {
   width: 100%;
 }
 
+.link {
+  text-decoration: none;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
@@ -223,7 +227,6 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
   color: inherit;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -257,9 +260,17 @@ body {
 }
 
 .menu-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: #000;
   margin-left: auto;
   background-color: transparent;
   border: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 5px;
 }
 
 .mobile-menu {
@@ -281,9 +292,19 @@ body {
 }
 
 .menu-close {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   margin-bottom: 1px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.menu-close:hover, .menu-close:focus {
+  fill: var(--accent-color);
 }
 
 .mobile-menu-list {
@@ -322,7 +343,7 @@ body {
 }
 
 .mobile-soc-item:not(:last-child)::after {
-  position: absolute;
+  position: relative;
   content: "";
   width: 22px;
   height: 0;
