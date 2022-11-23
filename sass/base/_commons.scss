@@ -9,3 +9,9 @@ body {
   list-style: none;
   text-decoration: dashed;
 }
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

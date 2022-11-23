@@ -81,6 +81,12 @@ body {
           text-decoration: dashed;
 }
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -266,6 +272,13 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.mobile-menu > .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+}
 
 .menu-close {
   display: block;
@@ -274,10 +287,6 @@ body {
 }
 
 .mobile-menu-list {
-  margin-bottom: 300px;
-}
-
-.mobile-menu-item:not(:last-child) {
   margin-bottom: 30px;
 }
 
@@ -308,11 +317,12 @@ body {
 .mobile-soc-list {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   gap: 10px;
 }
 
 .mobile-soc-item:not(:last-child)::after {
-  position: relative;
+  position: absolute;
   content: "";
   width: 22px;
   height: 0;
@@ -1068,7 +1078,7 @@ body {
   fill: var(--accent-color);
 }
 
-.backdrop.is-hidden {
+.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
