@@ -157,7 +157,7 @@ body {
   display: none;
   margin-left: 93px;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 768px) {
   .nav-list {
     display: flex;
   }
@@ -193,12 +193,6 @@ body {
 .contact-nav {
   display: none;
   margin-left: auto;
-}
-@media screen and (min-width: 480px) {
-  .contact-nav {
-    display: flex;
-    flex-wrap: wrap;
-  }
 }
 @media screen and (min-width: 768px) {
   .contact-nav {
