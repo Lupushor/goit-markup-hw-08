@@ -1,5 +1,12 @@
 .signUp {
   margin-left: 93px;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .signUp-title {
@@ -21,7 +28,7 @@
   letter-spacing: 0.03em;
   min-width: 358px;
   height: 50px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-radius: 4px;
@@ -29,6 +36,10 @@
   padding-top: 15px;
   padding-bottom: 15px;
   color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
+  }
 
   &:focus {
     outline: transparent;
@@ -70,4 +81,15 @@
 
   transform: translateY(-50%);
   fill: var(--a-color-white);
+}
+
+.footer-form {
+  display: block;
+
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
 }

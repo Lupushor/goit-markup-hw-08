@@ -861,9 +861,36 @@ body {
   display: flex;
   align-items: baseline;
 }
+@media screen and (max-width: 767px) {
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .footer-address {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 60px;
+  }
+}
 
 .address-item:nth-child(2) {
   margin: 9px 0;
+}
+
+@media screen and (min-width: 767px) {
+  .address-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .item-address {
@@ -903,6 +930,15 @@ body {
 .invitation {
   margin-left: 93px;
 }
+@media screen and (max-width: 767px) {
+  .invitation {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+}
 
 .invitation-soc-list {
   display: flex;
@@ -935,6 +971,14 @@ body {
 .signUp {
   margin-left: 93px;
 }
+@media screen and (max-width: 767px) {
+  .signUp {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 
 .signUp-title {
   margin-bottom: 20px;
@@ -954,7 +998,7 @@ body {
   letter-spacing: 0.03em;
   min-width: 358px;
   height: 50px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-radius: 4px;
@@ -962,6 +1006,11 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 1200px) {
+  .signUp-input {
+    margin-right: 12px;
+  }
 }
 .signUp-input:focus {
   outline: transparent;
@@ -995,6 +1044,18 @@ body {
   top: 50%;
   transform: translateY(-50%);
   fill: var(--a-color-white);
+}
+
+.footer-form {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .footer-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .portfolio {
