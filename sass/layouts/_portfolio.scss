@@ -8,10 +8,17 @@
 
 .portfolio-list-btn {
   display: flex;
-  justify-content: center;
-  gap: 8px;
-
+  gap: 15px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+
+    margin-bottom: 50px;
+  }
 }
 /* .portfolio-item-btn {
     padding: 6px 22px;
@@ -68,6 +75,26 @@
   }
   // @include calc-fb (3, 30px)
   // flex-basis: calc((100% - 2 * 30px) / 3);
+}
+
+.img-description {
+  padding: 24px 20px;
+  border-left: 1px solid var(--border-color-portfolio);
+  border-bottom: 1px solid var(--border-color-portfolio);
+  border-right: 1px solid var(--border-color-portfolio);
+
+  // max-width: 450px;
+  // max-height: 404px;
+
+  // @media screen and (min-width: 768px) {
+  //   max-width: 354px;
+  //   max-height: 440px;
+  // }
+
+  // @media screen and (min-width: 1200px) {
+  //   max-width: 450px;
+  //   max-height: 404px;
+  // }
 }
 
 .portfolio-link {

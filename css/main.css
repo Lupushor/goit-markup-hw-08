@@ -621,13 +621,6 @@ body {
   color: var(--ptimary-text-color);
 }
 
-.img-description {
-  padding: 24px 20px;
-  border-left: 1px solid var(--border-color-portfolio);
-  border-bottom: 1px solid var(--border-color-portfolio);
-  border-right: 1px solid var(--border-color-portfolio);
-}
-
 .direction {
   padding: 60px 0;
 }
@@ -1084,9 +1077,17 @@ body {
 
 .portfolio-list-btn {
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  gap: 15px;
   margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-list-btn {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 50px;
+  }
 }
 
 /* .portfolio-item-btn {
@@ -1133,6 +1134,13 @@ body {
   .portfolio-item .team-item {
     width: calc((100% - 60px) / 3);
   }
+}
+
+.img-description {
+  padding: 24px 20px;
+  border-left: 1px solid var(--border-color-portfolio);
+  border-bottom: 1px solid var(--border-color-portfolio);
+  border-right: 1px solid var(--border-color-portfolio);
 }
 
 .portfolio-link {
