@@ -3,7 +3,6 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 60px;
 
   @media screen and (min-width: 1199px) {
     
@@ -28,7 +27,7 @@
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
-  min-width: 358px;
+  min-width: 450px;
   height: 50px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -41,6 +40,7 @@
 
   @media screen and (min-width: 1200px) {
     margin-right: 12px;
+    min-width: 358px;
   }
 
   &:focus {
@@ -86,11 +86,9 @@
 }
 
 .footer-form {
-  display: block;
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
   }
