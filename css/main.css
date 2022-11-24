@@ -1083,9 +1083,9 @@ body {
 }
 
 .portfolio-list-btn {
-  gap: 8px;
   display: flex;
   justify-content: center;
+  gap: 8px;
   margin-bottom: 50px;
 }
 
@@ -1121,8 +1121,18 @@ body {
   flex-wrap: wrap;
 }
 
-.portfolio-item {
-  width: calc((100% - 60px) / 3);
+.portfolio-item .team-item {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-item .team-item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-item .team-item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .portfolio-link {

@@ -7,9 +7,9 @@
 }
 
 .portfolio-list-btn {
-  gap: 8px;
   display: flex;
   justify-content: center;
+  gap: 8px;
 
   margin-bottom: 50px;
 }
@@ -55,7 +55,18 @@
 }
 
 .portfolio-item {
-  @include calc-fb (3, 30px)
+  .team-item {
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      @include calc-fb(2, 30px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      @include calc-fb(3, 30px);
+    }
+  }
+  // @include calc-fb (3, 30px)
   // flex-basis: calc((100% - 2 * 30px) / 3);
 }
 
