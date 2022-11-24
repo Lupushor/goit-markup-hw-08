@@ -201,11 +201,11 @@ body {
 .contact-nav {
   display: none;
 }
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
   .contact-nav {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 96px;
+    justify-content: flex-end;
   }
 }
 @media screen and (min-width: 1200px) {
