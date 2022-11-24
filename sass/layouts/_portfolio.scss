@@ -62,26 +62,25 @@
 }
 
 .portfolio-item {
-  .team-item {
-    width: 100%;
+  width: 100%;
 
-    @media screen and (min-width: 768px) {
-      @include calc-fb(2, 30px);
-    }
-
-    @media screen and (min-width: 1200px) {
-      @include calc-fb(3, 30px);
-    }
+  @media screen and (min-width: 768px) {
+    @include calc-fb(2, 30px);
   }
-  // @include calc-fb (3, 30px)
-  // flex-basis: calc((100% - 2 * 30px) / 3);
+
+  @media screen and (min-width: 1200px) {
+    @include calc-fb(3, 30px);
+  }
 }
+// @include calc-fb (3, 30px)
+// flex-basis: calc((100% - 2 * 30px) / 3);
 
 .img-description {
-  padding: 24px 20px;
+  padding: 20px 24px;
   border-left: 1px solid var(--border-color-portfolio);
   border-bottom: 1px solid var(--border-color-portfolio);
   border-right: 1px solid var(--border-color-portfolio);
+  flex-grow: 1;
 
   // max-width: 450px;
   // max-height: 404px;
