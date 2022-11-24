@@ -1141,6 +1141,12 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-item:first-child .img-description {
+    height: 146px;
+  }
+}
+
 .img-description {
   padding: 20px 24px;
   border-left: 1px solid var(--border-color-portfolio);
