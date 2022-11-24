@@ -1,5 +1,5 @@
 .footer-address {
-  @media screen and (min-width: 767px) {
+  @media screen and (max-width: 1199px) {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -13,11 +13,10 @@
 }
 
 .address-list {
-  @media screen and (min-width: 767px) {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+  text-align: center;
+  
+  @media screen and (min-width: 1200px) {
+    text-align: left;
   }
 }
 .item-address {

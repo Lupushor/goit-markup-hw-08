@@ -10,14 +10,15 @@
 }
 
 .invitation {
-  margin-left: 93px;
-
-  @media screen and (max-width: 767px) {
-    display: flex;
+  display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     margin-bottom: 60px;
+
+  @media screen and (min-width: 1199px) {
+    
+    margin-left: 93px;
   }
 }
 
