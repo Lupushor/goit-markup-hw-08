@@ -167,11 +167,16 @@ body {
 .nav-list {
   position: relative;
   display: none;
-  margin-left: 93px;
+  margin-left: 87px;
 }
 @media screen and (min-width: 768px) {
   .nav-list {
     display: flex;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav-list {
+    margin-left: 92px;
   }
 }
 .nav-list .link.current {
@@ -273,7 +278,13 @@ body {
 .contact-icon-mail,
 .contact-icon-phone {
   fill: currentColor;
-  margin-right: 10px;
+  margin-right: 8px;
+}
+@media screen and (min-width: 1200px) {
+  .contact-icon-mail,
+.contact-icon-phone {
+    margin-right: 10px;
+  }
 }
 
 .current-page {
@@ -292,7 +303,8 @@ body {
   border-radius: 2px;
 }
 
-.mobile-menu-top, .mobile-menu-bottom {
+.mobile-menu-top,
+.mobile-menu-bottom {
   margin-left: 40px;
 }
 
@@ -350,6 +362,9 @@ body {
 
 .mobile-menu-list {
   margin-bottom: 30px;
+}
+.mobile-menu-list .link.current {
+  color: var(--accent-color);
 }
 
 .mobile-menu-link {
@@ -640,12 +655,17 @@ body {
 }
 
 .direction-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   color: var(--title-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .direction-title {
+    margin-bottom: 50px;
+  }
 }
 
 .direction-text-wrap {
@@ -681,12 +701,17 @@ body {
 }
 
 .team-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   color: var(--title-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .team-title {
+    margin-bottom: 50px;
+  }
 }
 
 .team-list {
@@ -775,12 +800,17 @@ body {
 }
 
 .customers-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   color: var(--title-text-color);
+}
+@media screen and (min-width: 1200px) {
+  .customers-title {
+    margin-bottom: 50px;
+  }
 }
 
 .customers-list {
@@ -860,9 +890,8 @@ body {
   .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: baseline;
-    flex-direction: row;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -872,13 +901,20 @@ body {
   }
 }
 
+.footer-address {
+  display: flex;
+  flex-wrap: wrap;
+}
 @media screen and (max-width: 1199px) {
   .footer-address {
-    display: flex;
-    flex-wrap: wrap;
     align-items: center;
     flex-direction: column;
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-address {
+    max-width: 210px;
   }
 }
 
@@ -932,13 +968,18 @@ body {
 .invitation {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 60px;
 }
-@media screen and (min-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .invitation {
-    margin-left: 93px;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .invitation {
+    max-width: 210px;
+    margin-left: 70px;
   }
 }
 
@@ -973,10 +1014,14 @@ body {
 .signUp {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
 }
-@media screen and (min-width: 1199px) {
+@media screen and (max-width: 1199px) {
+  .signUp {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
   .signUp {
     margin-left: 93px;
   }
@@ -1000,7 +1045,6 @@ body {
   letter-spacing: 0.03em;
   min-width: 300px;
   height: 50px;
-  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-radius: 4px;
@@ -1009,9 +1053,10 @@ body {
   padding-bottom: 15px;
   color: rgba(255, 255, 255, 0.6);
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
   .signUp-input {
     min-width: 450px;
+    margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1219,11 +1264,11 @@ body {
 }
 @media screen and (max-width: 1199px) {
   .modal {
-    height: 95%;
-    width: 95%;
+    height: 100%;
+    width: 100%;
     max-height: 609px;
     max-width: 450px;
-    overflow: scroll;
+    overflow: auto;
   }
 }
 
@@ -1358,11 +1403,18 @@ body {
 }
 
 .user-rules-text {
-  font-size: 14px;
-  line-height: 1.17;
+  font-size: 12px;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: var(--ptimary-text-color);
   display: flex;
+}
+@media screen and (min-width: 1200px) {
+  .user-rules-text {
+    font-size: 14px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+  }
 }
 .user-rules-text::before {
   content: "";

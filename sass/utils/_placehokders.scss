@@ -1,18 +1,24 @@
 @mixin section-padding {
-    padding: 60px 0;
-  
-    @media screen and (min-width: 1200px) {
+  padding: 60px 0;
+
+  @media screen and (min-width: 1200px) {
     padding: 94px 0;
   }
-
-  
 }
 
 @mixin section-title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
   color: var(--title-text-color);
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
+
+// .nav-list .link.current {
+//   color: var(--accent-color);
+// }
